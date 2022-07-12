@@ -1,6 +1,6 @@
 from tkinter import CASCADE
 from django.db import models
-
+from jalali_date import datetime2jalali
 # Create your models here.
 class Vcard(models.Model):
 
@@ -22,7 +22,12 @@ class Vcard(models.Model):
     content = models.TextField(verbose_name ='توضیحات')
     image = models.ImageField(upload_to='VcardPhoto/' , verbose_name ='تصویر شاخص' , null=True , blank = True)
     phone =  models.CharField(max_length=11 , verbose_name='تلفن')
+    date = models.DateTimeField(verbose_name='زمان شروع' , auto_now_add=True)
 
     def __str__(self):
         return f'{self.idcode} , {self.company} , {self.color} , {self.woodType}'
+
+
+    def jalaliDate(self):
+        return datetime2jalali(self.date)
 

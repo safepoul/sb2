@@ -1,7 +1,7 @@
 
 
 from django.urls import path
-from .views import VcardHome , Vcard_list , Vcard_details , VcardCreate , VcardUpdate
+from .views import VcardHome , Vcard_list , Vcard_details , VcardCreate , VcardUpdate , VcardDelet
 
 
 urlpatterns = [
@@ -11,6 +11,7 @@ urlpatterns = [
     path('APIDetails/<pk>' , Vcard_details , name='VcardDetailsAPI'),
     path('APIVcardCreate/' , VcardCreate , name='VcardCreateAPI'),
     path('APIVcardUpdate/<pk>' , VcardUpdate , name='VcardUpdateAPI'),
+    path('APIVcardDelete/<pk>' , VcardDelet , name='VcardDeleteAPI'),
 
 
 ]

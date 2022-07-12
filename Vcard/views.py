@@ -45,3 +45,10 @@ def VcardUpdate(request , pk):
         Vcard_serializaer.save()
 
     return Response(Vcard.data)
+
+@api_view(["DELET"])
+def VcardDelet(request , pk):
+    instance = Vcard.objects.get(id=pk)
+    instance.delete()
+
+    return Response('Vcard Deleted')
