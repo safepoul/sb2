@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'Vcard.apps.VcardConfig',
     'rest_framework',
     'jalali_date',
+    'acounts.apps.Acounts',
     
 
 
