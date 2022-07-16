@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'Vcard.apps.VcardConfig',
     'rest_framework',
     'jalali_date',
-    'acounts.apps.Acounts',
+    'acounts.apps.AcountsConfig',
     
 
 
@@ -165,3 +165,5 @@ MEDIA_ROOT = merge(BASE_DIR,'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'acounts.CustomUser'
